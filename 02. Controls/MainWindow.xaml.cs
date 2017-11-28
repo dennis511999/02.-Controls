@@ -23,12 +23,13 @@ namespace _02.Controls
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
-        public bool Image = false;
+        public bool Image = true;
         public void btn1_Click(object sender, RoutedEventArgs e)
         {
-            if(btn1.Content.ToString() == "")
+            if(btn1.Content.ToString() == "Click")
             {
                 if(Image == false)
                 {
@@ -47,7 +48,7 @@ namespace _02.Controls
 
         public void btn2_Click(object sender, RoutedEventArgs e)
         {
-            if (btn2.Content.ToString() == "")
+            if (btn2.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -66,7 +67,7 @@ namespace _02.Controls
 
         public void btn3_Click(object sender, RoutedEventArgs e)
         {
-            if (btn3.Content.ToString() == "")
+            if (btn3.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -85,7 +86,7 @@ namespace _02.Controls
 
         public void btn4_Click(object sender, RoutedEventArgs e)
         {
-            if (btn4.Content.ToString() == "")
+            if (btn4.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -104,7 +105,7 @@ namespace _02.Controls
 
         public void btn5_Click(object sender, RoutedEventArgs e)
         {
-            if (btn5.Content.ToString() == "")
+            if (btn5.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -123,7 +124,7 @@ namespace _02.Controls
 
         public void btn6_Click(object sender, RoutedEventArgs e)
         {
-            if (btn6.Content.ToString() == "")
+            if (btn6.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -142,7 +143,7 @@ namespace _02.Controls
 
         public void btn7_Click(object sender, RoutedEventArgs e)
         {
-            if ((string)btn7.Content == "")
+            if ((string)btn7.Content == "Click")
             {
                 if (Image == false)
                 {
@@ -161,7 +162,7 @@ namespace _02.Controls
 
         public void btn8_Click(object sender, RoutedEventArgs e)
         {
-            if (btn8.Content.ToString() == "")
+            if (btn8.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -180,7 +181,7 @@ namespace _02.Controls
 
         public void btn9_Click(object sender, RoutedEventArgs e)
         {
-            if (btn9.Content.ToString() == "")
+            if (btn9.Content.ToString() == "Click")
             {
                 if (Image == false)
                 {
@@ -214,7 +215,7 @@ namespace _02.Controls
         {
             string test = "x";
             Winner1(test);
-            test = "0";
+            test = "o";
             Winner1(test);
         }
 
@@ -222,20 +223,30 @@ namespace _02.Controls
         {
             if (btn1.Content.ToString() == test && btn2.Content.ToString() == test && btn3.Content.ToString() == test || btn4.Content.ToString() == test && btn5.Content.ToString() == test && btn6.Content.ToString() == test || btn7.Content.ToString() == test && btn8.Content.ToString() == test && btn9.Content.ToString() == test
             || btn1.Content.ToString() == test && btn4.Content.ToString() == test && btn7.Content.ToString() == test || btn2.Content.ToString() == test && btn5.Content.ToString() == test && btn8.Content.ToString() == test || btn3.Content.ToString() == test && btn6.Content.ToString() == test && btn9.Content.ToString() == test
-            || btn1.Content.ToString() == test && btn5.Content.ToString() == test && btn9.Content.ToString() == test || btn3.Content.ToString() == test && btn5.Content.ToString() == test && btn7.Content.ToString() == test)
+            || btn1.Content.ToString() == test && btn5.Content.ToString() == test && btn9.Content.ToString() == test || btn3.Content.ToString() == test && btn5.Content.ToString() == test && btn7.Content.ToString() == test) 
             {
-                if (test == "X")
+                if (test == "x")
                 {
                     MessageBox.Show(" X je hebt gewonnen", "Gefeliciteerd");
                 }
+                else if (test == "o")
+                {
+                    MessageBox.Show(" O je hebt gewonnen", "Gefeliciteerd");
+                }
                 else
                 {
-                    MessageBox.Show(" 0 je hebt gewonnen", "Gefeliciteerd");
+                   
                 }
-
                 Button_Click(null, null);
             }
            
+        }
+
+        public void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            // This will go in the event handler for your button click.
+            System.Diagnostics.Process.Start(Application.ResourceAssembly.Location);
+            Application.Current.Shutdown();
         }
     }
 

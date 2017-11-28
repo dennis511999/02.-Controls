@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="630" Width="610">
-    <Grid>
+        Title="MainWindow" Height="700" Width="610">
+    <Grid Height="600" VerticalAlignment="Top">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
             <ColumnDefinition Width="200" />
@@ -19,15 +19,16 @@
         </Grid.RowDefinitions>
 
 
-        <Button Name="btn1" Margin="0" Grid.Column="0" Grid.Row="0" Click="btn1_Click" FontSize="80" ClickMode="Press"></Button>
-        <Button Name="btn2" Margin="0" Grid.Column="1" Grid.Row="0" Click="btn2_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn3" Margin="0" Grid.Column="2" Grid.Row="0" Click="btn3_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn4" Margin="0" Grid.Column="0" Grid.Row="1" Click="btn4_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn5" Margin="0" Grid.Column="1" Grid.Row="1" Click="btn5_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn6" Margin="0" Grid.Column="2" Grid.Row="1" Click="btn6_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn7" Margin="0" Grid.Column="0" Grid.Row="2" Click="btn7_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn8" Margin="0" Grid.Column="1" Grid.Row="2" Click="btn8_Click" FontSize="24" ClickMode="Press"></Button>
-        <Button Name="btn9" Margin="0" Grid.Column="2" Grid.Row="2" Click="btn9_Click" FontSize="24" ClickMode="Press"></Button>
+        <Button x:Name="btn1" Margin="0" Grid.Column="0" Grid.Row="0" Click="btn1_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn2" Margin="0" Grid.Column="1" Grid.Row="0" Click="btn2_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn3" Margin="0" Grid.Column="2" Grid.Row="0" Click="btn3_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn4" Margin="0" Grid.Column="0" Grid.Row="1" Click="btn4_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn5" Margin="0" Grid.Column="1" Grid.Row="1" Click="btn5_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn6" Margin="0" Grid.Column="2" Grid.Row="1" Click="btn6_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn7" Margin="0" Grid.Column="0" Grid.Row="2" Click="btn7_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn8" Margin="0" Grid.Column="1" Grid.Row="2" Click="btn8_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btn9" Margin="0" Grid.Column="2" Grid.Row="2" Click="btn9_Click" FontSize="80" ClickMode="Press" Content="Click"/>
+        <Button x:Name="btnReset" Height="70" Margin="0,200,0,-70" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="3" Click="btnReset_Click" FontSize="48" Content="Reset" FontFamily="Times New Roman" Background="#FFEC0606"/>
 
     </Grid>
 </Window>
